@@ -1,0 +1,61 @@
+.mapa {
+    background: transparent linear-gradient(90deg, $azul-ciano 0%, $azul-escuro 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+    display: flex;
+
+    &__ornament {
+        position: absolute;
+        top: 28.803rem;
+        left: 0;
+        width: 43.19rem;
+    }
+
+    .wrapper {
+        max-width: 1340px;
+    }
+
+    &__circle {
+        width: 59.3rem;
+        height: 59.3rem;
+        padding: 0 7.7rem;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        border: .4rem solid $amarelo;
+
+        font-size: 4rem;
+        line-height: 5.5rem;
+        text-align: center;
+        color: $branco;
+
+        position: absolute;
+        top: 12.003rem;
+        left: 50.6rem;
+
+        img {
+            margin-bottom: 1.333rem;
+        }
+    }
+
+    &__figure {
+        position: relative;
+        margin: 16.761rem 0 7.02rem;
+
+        svg path {
+            cursor: pointer;
+            transition: .3s all;
+    
+            &:hover {
+                fill: $amarelo;
+            }
+        }
+    }
+}
+
+.info__item {
+    
+}

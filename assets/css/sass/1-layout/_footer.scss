@@ -1,0 +1,60 @@
+.footer {
+    position: relative;
+    background: $azul-escuro 0% 0% no-repeat padding-box;
+    display: flex;
+
+    .wrapper {
+        max-width: 1086px;
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin: 7.855rem auto 7.2rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            
+            font-size: 2.1rem;
+            color: $branco;
+
+            img {
+                margin-right: 2rem;
+            }
+        }
+
+        p {
+            width: 100%;
+
+            font-size: 2rem;
+            text-align: center;
+            color: $branco;
+            line-height: 3rem;
+
+            margin-top: 6.7rem;
+        }
+    }
+
+    .seta {
+        position: absolute;
+        top: 9.308rem;
+        right: 15.904rem;
+
+        svg path {
+            transition: .3s all;
+        }
+
+        &:hover {
+            .seta__circle, .seta__background {
+                fill: $azul-ciano;
+            }
+
+            .seta__arrow {
+                fill: $branco;
+            }
+        }
+    }
+}
