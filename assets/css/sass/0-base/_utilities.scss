@@ -2,33 +2,29 @@
 
 /* == 1: Responsivo */
 
-$screen-small: 500px;
-$screen-tablet: 768px;
-$screen-medium: 1024px;
-$screen-large: 1400px;
+$screen-small: 900px;
+$screen-tablet: 1024px;
+$screen-medium: 1366px;
+$screen-large: 1600px;
 
-// Small devices (767px-)
 @mixin xs {
     @media (max-width: #{$screen-small}) {
         @content;
     }
 }
 
-// Medium devices (768px-)
 @mixin sm {
     @media (max-width: #{$screen-tablet}) {
         @content;
     }
 }
 
-// Large devices (1024px-)
 @mixin md {
     @media (max-width: #{$screen-medium}) {
         @content;
     }
 }
 
-// Extra large devices (1400px-)
 @mixin lg {
     @media (max-width: #{$screen-large}) {
         @content;

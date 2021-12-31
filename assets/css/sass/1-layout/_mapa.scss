@@ -3,6 +3,21 @@
     position: relative;
     display: flex;
 
+    &--obras {
+        background: $branco;
+
+        .mapa__circle {
+            background-color: $azul-escuro;
+            border: $azul-escuro;
+        }
+
+        .mapa__ornament {
+            width: 41.5rem;
+            height: 14.282rem;
+            object-fit: cover;
+        }
+    }
+
     &__ornament {
         position: absolute;
         top: 28.803rem;
@@ -56,6 +71,87 @@
     }
 }
 
-.info__item {
+.info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
     
+    &__item {
+        max-width: 19.823rem;
+        display: none;
+        flex-direction: column;
+        background-color: $branco;
+        position: absolute;
+        z-index: 3;
+        pointer-events: visible;
+        transform: translateY(-80%);
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 2.5rem;
+            bottom: -.6rem;
+            transform: rotate(45deg);
+
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: $branco;
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    &__header {
+        background-color: $azul-escuro;
+        text-align: center;
+        padding: 2.139rem 3rem;
+
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+        text-transform: uppercase;
+        color: $branco;
+    }
+
+    article {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    span {
+        margin-top: 1.5rem;
+        font-size: 1.7rem;
+        line-height: 2rem;
+        color: $cinza;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+
+        i {
+            font-size: 2.1rem;
+            color: $azul-escuro;
+            font-style: normal;
+            margin-top: .958rem;
+        }
+    }
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        color: $azul-ciano;
+        
+        margin: 1.5rem 0;
+
+        &:hover {
+            transition: font-weight .3s ease-in-out;
+            font-weight: 700;
+        }
+    }
 }

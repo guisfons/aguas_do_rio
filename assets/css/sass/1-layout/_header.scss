@@ -7,6 +7,7 @@
         z-index: 1;
         position: relative;
         z-index: 9999;
+        display: none;
 
         figure svg {
             position: absolute;
@@ -22,8 +23,17 @@
             justify-content: space-between;
             position: relative;
 
+            @include sm {
+                align-items: center;
+            }
+
             img {
+                max-width: 47.7rem;
                 margin-top: 5.535rem;
+
+                @include sm {
+                    margin-top: 0;
+                }
             }
         }
 
@@ -32,11 +42,20 @@
             align-items: center;
             column-gap: 4rem;
             margin-top: 7.9rem;
+
+            @include sm {
+                margin-top: 0;
+            }
             
             a {
                 font-size: 2.7rem;
                 line-height: 4.1rem;
                 color: $branco;
+
+                &:hover {
+                    color: $azul-ciano;
+                    font-weight: 700;
+                }
             }
         }
     }
@@ -72,8 +91,16 @@
                 font-size: 2.7rem;
                 line-height: 4.1rem;
                 color: $azul-escuro;
-                
+
+                &:hover {
+                    color: $azul-ciano;
+                    font-weight: 700;
+                }
             }
         }
     }
+}
+
+.home .header__blue {
+    display: block;
 }

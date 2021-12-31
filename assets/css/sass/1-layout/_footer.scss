@@ -2,6 +2,11 @@
     position: relative;
     background: $azul-escuro 0% 0% no-repeat padding-box;
     display: flex;
+    // margin-top: 21.2rem;
+
+    @include sm {
+        flex-wrap: wrap;
+    }
 
     .wrapper {
         max-width: 1086px;
@@ -42,6 +47,13 @@
         position: absolute;
         top: 9.308rem;
         right: 15.904rem;
+
+        @include sm {
+            position: relative;
+            top: initial;
+            right: initial;
+            margin: 97px auto 60px;
+        }
 
         svg path {
             transition: .3s all;
