@@ -1,0 +1,18 @@
+.hero {
+    background-image: url(/assets/images/ilustra-header.svg);
+    background-position: 60% bottom;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+
+    margin-top: 5rem;
+    padding-bottom: 18.892rem;
+
+    p {
+        font-size: 3.5rem;
+        line-height: 5.5rem;
+        max-width: 70%;
+        margin: 0 auto 0 4%;
+        color: $azul-escuro;
+    }
+}

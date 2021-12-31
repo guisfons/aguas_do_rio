@@ -1,0 +1,106 @@
+.header {
+    position: relative;
+    
+    &__blue {
+        width: 100%;
+        height: 29.5rem;
+        z-index: 1;
+        position: relative;
+        z-index: 9999;
+        display: none;
+
+        figure svg {
+            position: absolute;
+            top: -.1rem;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+
+            @include sm {
+                align-items: center;
+            }
+
+            img {
+                max-width: 47.7rem;
+                margin-top: 5.535rem;
+
+                @include sm {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            column-gap: 4rem;
+            margin-top: 7.9rem;
+
+            @include sm {
+                margin-top: 0;
+            }
+            
+            a {
+                font-size: 2.7rem;
+                line-height: 4.1rem;
+                color: $branco;
+
+                &:hover {
+                    color: $azul-ciano;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    &__fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+
+        width: 100%;
+        height: 11.3rem;
+
+        background: $branco 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px $cinza-claro;
+        opacity: 1;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            column-gap: 4rem;
+            
+            a {
+                font-size: 2.7rem;
+                line-height: 4.1rem;
+                color: $azul-escuro;
+
+                &:hover {
+                    color: $azul-ciano;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.home .header__blue {
+    display: block;
+}
