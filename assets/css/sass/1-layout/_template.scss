@@ -2,7 +2,16 @@
     background-image: url(/assets/images/pattern-svg.svg);
     background-repeat: no-repeat;
     background-size: 100%;
+    
     background-position: center;
+
+    @include mq(1920) {
+        background-size: auto;
+    }
+
+    @include sm {
+        background: transparent linear-gradient(90deg, $azul-ciano 0%, $azul-escuro 100%) 0% 0% no-repeat padding-box !important;
+    }
 
     height: auto;
     width: 100%;
@@ -60,6 +69,10 @@
                 color: $branco;
                 text-align: center;
                 margin-top: 15.7rem;
+
+                @include sm {
+                    margin-top: 10%;
+                }
             }
         }
         
@@ -88,7 +101,7 @@
         &--interna {
             position: relative;
             left: initial;
-            transform: none;
+            transform: translateY(-30%);
 
             &-esgoto {
                 a {
@@ -246,6 +259,7 @@
             img {
                 position: relative;
                 z-index: 1;
+                max-width: 16.1rem;
             }
         }
 

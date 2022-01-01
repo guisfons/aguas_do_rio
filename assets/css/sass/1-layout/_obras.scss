@@ -27,6 +27,7 @@
 
             font-size: 2.5rem;
             color: $cinza;
+            background-color: $branco;
 
             padding: 0 4.7rem;
         }
@@ -43,7 +44,9 @@
             width: 11.7rem;
             height: 10rem;
 
-            background: transparent linear-gradient(270deg, #00AAAC 0%, #253E92 100%) 0% 0% no-repeat padding-box;
+            background: transparent linear-gradient(270deg, $azul-ciano 0%, $azul-escuro 100%) 0% 0% no-repeat padding-box;
+
+            cursor: pointer;
         }
     }
 

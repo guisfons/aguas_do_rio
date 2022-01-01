@@ -5,6 +5,11 @@
 
     .wrapper {
         max-width: 113rem;
+
+        @include sm {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     &__select {
@@ -14,6 +19,10 @@
         width: fit-content;
 
         transform: translateY(-50%);
+
+        @include sm {
+            width: 100%;
+        }
 
         &::after {
             content: '';
@@ -56,6 +65,11 @@
             outline: none;
             padding: 0 4.7rem 0 5.8rem;
 
+            @include sm {
+                width: 100%;
+                text-align: center;
+            }
+
             font-size: 3.2rem;
             line-height: 7.2rem;
             color: $branco;
@@ -82,5 +96,10 @@
         line-height: 5rem;
         color: $azul-escuro;
         margin-bottom: 3rem;
+
+        @include sm {
+            max-width: 90%;
+            margin: 0 auto 5rem;
+        }
     }
 }
