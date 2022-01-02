@@ -9,6 +9,10 @@
         .mapa__circle {
             background-color: $azul-escuro;
             border: $azul-escuro;
+
+            @include sm {
+                margin: 64px auto 0;
+            }
         }
 
         .mapa__ornament {
@@ -83,6 +87,8 @@
         justify-content: center;
 
         @include sm {
+            margin: 6.761rem 0 7.02rem;
+            
             @include mqMax(530) {
                 display: initial;
                 justify-content: initial;
@@ -98,7 +104,8 @@
                 }
 
                 @include mqMax(530) {
-                    transform: translateX(-20%);
+                    transform: translateX(-50%);
+                    margin-left: 50%;
                 }
             }
         } 
@@ -124,13 +131,14 @@
     
     &__item {
         max-width: 19.823rem;
+        width: 100%;
         display: none;
         flex-direction: column;
         background-color: $branco;
         position: absolute;
         z-index: 3;
         pointer-events: visible;
-        transform: translateY(-80%);
+        transform: translateY(-170px);
 
         @include sm {
             max-width: 198.23px;

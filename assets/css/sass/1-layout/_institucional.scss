@@ -1,0 +1,199 @@
+.conteudo-institucional {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        max-width: 1170px;
+        margin: 10.1rem auto 15.7rem;
+
+        @include sm {
+            position: relative;
+        }
+    }
+
+    &__maisagua {
+        font-size: 7.5rem;
+        line-height: 10.5rem;
+        color: $azul-escuro;
+
+        max-width: calc(50% - 10.3rem);
+
+        @include lg {
+            font-size: 7rem;
+            max-width: calc(38% - 10.3rem);
+        }
+
+        @include mqMax(1280) {
+            font-size: 6.5rem;
+            max-width: calc(33% - 10.3rem);
+        }
+
+        @include sm {
+            max-width: 195px;
+            font-size: 31px;
+            line-height: 43px;
+            height: fit-content;
+        }
+
+        strong {
+            font-weight: 700;
+
+            @include sm {
+                &:last-of-type {
+                    margin-right: 10px;
+                }
+            }
+
+            i {
+                color: $azul-ciano;
+                font-style: normal;
+            }
+        }
+    }
+
+    article {
+        max-width: 50.8rem;
+
+        @include sm {
+            max-width: 100%;
+            order: 1;
+        }
+
+        @include mqMax(1280) {
+            max-width: 50%;
+        }
+
+        @include mqMax(768) {
+            max-width: 100%;
+        }
+
+        h3 {
+            font-size: 6rem;
+            line-height: 7rem;
+            color: $amarelo;
+
+            max-width: 33.7rem;
+            margin-bottom: 2.4rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: $azul-escuro;
+            line-height: 3.5rem;
+
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .circle-img {
+        max-width: 51.9rem;
+        width: 100%;
+        height: 51.9rem;
+
+        border-radius: 50%;
+        margin: 2.7rem 13rem 0 0;
+
+        @include sm {
+            max-width: 221px;
+            height: 221px;
+            margin: 200px 50px 0 0;
+            transform: translateX(48px);
+        }
+
+        @include mqMax(768) {
+            margin: 200px 0 0 auto;
+        }
+
+        @include mqMax(410) {
+            margin: 0px 0 0 auto;
+        }
+    }
+
+    .ornamento {
+        position: absolute;
+        top: 144%;
+        left: 0;
+
+        max-width: 58rem;
+        
+        @include mqMax(1280) {
+            top: 110%;
+        }
+
+        @include lg {
+            top: 124%;
+        }
+
+        @include mqMax(1280) {
+            top: 160%;
+        }
+
+        @include sm {
+            top: 200px;
+            left: -6%;
+            width: 157px;
+            height: 65px;
+            object-fit: cover;
+        }
+    }
+
+    .canais-atendimento {
+        max-width: 50.8rem;
+        width: 100%;
+        margin-top: 7.6rem;
+
+        @include sm {
+            order: 2;
+        }
+
+        h4 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: $azul-ciano;
+            margin-bottom: 3.3rem;
+        }
+
+        &__contato {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3.3rem;
+
+            a {
+                height: 5rem;
+                width: 5rem;
+
+                &:first-of-type {
+                    margin-right: .5rem;
+                }
+
+                &:last-of-type {
+                    margin-right: 1.3rem;
+                }
+            }
+        }
+
+        span {
+            font-size: 2rem;
+            line-height: 2.8rem;
+            color: $azul-escuro;
+        }
+
+        & > span {
+            display: flex;
+            align-items: center;
+
+            margin-bottom: 3.3rem;
+
+            img {
+                margin-right: 2rem;
+            }
+
+            a {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,23 +1,31 @@
 .hero {
     background-image: url(/assets/images/ilustra-header.svg);
-    background-position: 60% bottom;
+    background-position: 60% 120%;
     background-repeat: no-repeat;
-    height: 100%;
     width: 100%;
 
-    margin-top: 5rem;
+    // margin-top: 5rem;
     padding-bottom: 18.892rem;
+
+    position: relative;
     
     @include sm {
         background-image: none;
         background-size: 100%;
+    }
 
-        .wrapper {
+    .wrapper {
+
+        @include sm {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 130px;
+            margin-top: 170px;
             width: 100%;
+        }
+
+        @include mqMax(768) {
+            margin-top: 105px;
         }
     }
 

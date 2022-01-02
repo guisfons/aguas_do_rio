@@ -28,7 +28,7 @@
         min-height: 10rem;
 
         position: relative;
-        padding: 0 8.562rem 0 4.8rem;
+        padding: 2rem 8.562rem 2rem 4.8rem;
 
         cursor: pointer;
 
@@ -144,7 +144,7 @@
 
     &__left {
         margin-bottom: 6.35rem;
-        max-width: 45%;
+        max-width: 55%;
         width: 100%;
         border-right: .1rem solid #484848;
 
@@ -179,7 +179,8 @@
     &__right {
         display: flex;
         justify-content: center;
-        max-width: 55%;
+        align-items: flex-start;
+        max-width: 45%;
         width: 100%;
         padding-left: 7.5rem;
 
@@ -194,6 +195,7 @@
     &__status {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
 
         h5 {
             font-size: 1.8rem;
@@ -206,6 +208,7 @@
     &__data {
         width: 100%;
         display: flex;
+        margin-top: 5.1rem;
 
         h5 {
             display: flex;
@@ -345,4 +348,8 @@
     fill: none;
     stroke-width: 3;
     stroke-linecap: square;
+}
+
+.box {
+    margin-bottom: 5rem;
 }
