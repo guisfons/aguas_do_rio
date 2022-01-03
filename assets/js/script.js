@@ -5,16 +5,19 @@ $(document).ready(function () {
             $('.header__blue').css('height', $('.header__blue figure svg').height());
         })
         $('.header__blue').css('height', $('.header__blue figure svg').height());
-
         
-        
-        // $('.hero').css('height', $('.hero').innerHeight());
-        // $('.hero .wrapper').css({
-        //     'position': 'fixed',
-        //     'left': '50%',
-        //     'transform': 'translate(-50%, -50%)',
-        //     'top': '50%',
-        // });
+        if($(window).width() < 1025) {
+            var userAgent = navigator.userAgent.toLowerCase(); 
+            if (userAgent .indexOf('safari')!=-1){ 
+               if(userAgent .indexOf('chrome')  > -1){
+                 //browser is chrome
+               }else if((userAgent .indexOf('opera')  > -1)||(userAgent .indexOf('opr')  > -1)){
+                 //browser is opera 
+               }else{
+                    $('.header__blue svg').css('top', '9.5rem');
+               }
+            }
+        }
         
     }
     heightHeader();
@@ -87,10 +90,39 @@ $(document).ready(function () {
             console.log('/municipios/'+municipio+'/'+obra+'.html');
         })
 
-        $('.selecione__obra select').on('click', function () {
+        $('.selecione__obra select').on('change', function () {
             if($('.selecione__obra select option:selected').val() == 'esgoto') {
                 $('.selecione__municipio select option').remove()
-                $('.selecione__municipio select').append('<option value="Rio de Janeiro">Rio de Janeiro</option>')
+                $('.selecione__municipio select').append('<option value="#" selected>Selecione o município</option><option value="Rio de Janeiro">Rio de Janeiro</option>')
+            }else {
+                $('.selecione__municipio select').append(`<option value="#" selected>Selecione o município</option>
+                    <option value="Aperibé">Aperibé</option>
+                    <option value="Belford Roxo">Belford Roxo</option>
+                    <option value="Cachoeiras de Macacu">Cachoeiras de Macacu</option>
+                    <option value="Cambuci">Cambuci</option>
+                    <option value="Cantagalo">Cantagalo</option>
+                    <option value="Casimiro de Abreu">Casimiro de Abreu</option>
+                    <option value="Cordeiro">Cordeiro</option>
+                    <option value="Duas Barras">Duas Barras</option>
+                    <option value="Duque de Caxias">Duque de Caxias</option>
+                    <option value="Itaboraí">Itaboraí</option>
+                    <option value="Itaocara">Itaocara</option>
+                    <option value="Japeri">Japeri</option>
+                    <option value="Magé">Magé</option>
+                    <option value="Maricá">Maricá</option>
+                    <option value="Mesquita">Mesquita</option>
+                    <option value="Miracema">Miracema</option>
+                    <option value="Nilópolis">Nilópolis</option>
+                    <option value="Nova Iguaçu">Nova Iguaçu</option>
+                    <option value="Paquetá">Paquetá</option>
+                    <option value="Queimados">Queimados</option>
+                    <option value="Rio Bonito">Rio Bonito</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="São Francisco de Itabapoana">São Francisco de Itabapoana</option>
+                    <option value="São Gonçalo">São Gonçalo</option>
+                    <option value="São João de Meriti">São João de Meriti</option>
+                    <option value="Saquarema">Saquarema</option>
+                    <option value="Tanguá">Tanguá</option>`)
             }
         })
         

@@ -137,7 +137,7 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            transform: translateY(100%);
+            transform: translateY(110%);
 
             width: 100%;
         }
@@ -265,7 +265,7 @@
             z-index: 1;
 
             @include sm {
-                
+                transform: translateY(-10%) !important;
             }
 
             &:first-of-type {
